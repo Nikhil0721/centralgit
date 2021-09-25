@@ -76,8 +76,9 @@ faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 # load the face mask detector model from disk
 maskNet = load_model("mask_detector.model")
 
-application=Flask(__name__)
+application = Flask(__name__)
 camera=cv2.VideoCapture(0)
+app = application
 
 
 def generate_frames():
@@ -118,4 +119,4 @@ def video():
     return Response(generate_frames(),mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__=="__main__":
-    application.run(debug=True)
+	application.run(debug=True)
