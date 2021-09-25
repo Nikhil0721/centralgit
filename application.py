@@ -78,7 +78,6 @@ maskNet = load_model("mask_detector.model")
 
 application = Flask(__name__)
 camera=cv2.VideoCapture(0)
-app = application
 
 
 def generate_frames():
