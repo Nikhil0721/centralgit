@@ -105,8 +105,6 @@ def generate_frames():
 
             yield(b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-        if cv2.waitKey(1) & 0xFF ==ord('q'): #if you want to break out of the loop
-            break
 
 
 @application.route('/')
